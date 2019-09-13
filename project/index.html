@@ -4,40 +4,51 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Title</title>
+	<title>BookList app</title>
 	<meta name="description" content="Description your project">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
-
-	<!-- Change color style your browser -->
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#333">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#333">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#333">
-
-	<!-- meta for social network (optional) -->
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:type" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:image" content="" />
 	<!-- css -->
+	<link rel="stylesheet" href="css/fontawesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-	<header>
-
-	</header>
-
-	<footer>
-
-	</footer>
+	<div class="container mt-4">
+		<h1 class="display-4 text-center">
+		  <i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Book</span>List</h1>
+		  <form id="book-form">
+			<div class="form-group">
+			  <label for="title">Title</label>
+			  <input type="text" id="title" class="form-control">
+			</div>
+			<div class="form-group">
+			  <label for="author">Author</label>
+			  <input type="text" id="author" class="form-control">
+			</div>
+			<div class="form-group">
+			  <label for="isbn">ISBN#</label>
+			  <input type="text" id="isbn" class="form-control">
+			</div>
+			<input type="submit" value="Add Book" class="btn btn-primary btn-block">
+		  </form>
+		  <table class="table table-striped mt-5">
+			<thead>
+			  <tr>
+				<th>Title</th>
+				<th>Author</th>
+				<th>ISBN#</th>
+				<th></th>
+			  </tr>
+			</thead>
+			<tbody id="book-list"></tbody>
+		  </table>
+	  </div>
+	
 
 	<!-- You can add scripts to gulpfile.js -->
 	<script src="js/scripts.js"></script>
